@@ -1,6 +1,6 @@
 {
   "name": "ember-quick-forms",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "The default blueprint for ember-cli addons.",
   "directories": {
     "doc": "doc",
@@ -19,7 +19,7 @@
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",
-    "ember-cli": "0.2.5",
+    "ember-cli": "0.2.7",
     "ember-cli-app-version": "0.3.3",
     "ember-cli-content-security-policy": "0.4.0",
     "ember-cli-dependency-checker": "^1.0.0",
@@ -38,7 +38,8 @@
     "ember-addon"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.0.0"
+    "ember-cli-babel": "^5.0.0",
+    "ember-cli-htmlbars": "^0.7.4"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
