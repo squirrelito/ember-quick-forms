@@ -3,7 +3,8 @@ import Ember from 'ember';
 var fieldComponent;
 export default Ember.Component.extend({
     tagName: '',
-    label: 'asasdasd',
+    hasLabel: true,
+    label: null,
     field: null,
     init: function () {
         fieldComponent = this;

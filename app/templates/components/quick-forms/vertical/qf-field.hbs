@@ -1,4 +1,4 @@
 <div class="form-group">
-    <label for="{{field.controlID}}">{{field.label}}</label>
+    {{#if field.hasLabel}} <label for="{{field.controlID}}">{{field.label}}</label> {{/if}}
     {{input type='text' class="form-control" id=field.controlID value=field.value placeholder=field.label}}
 </div>
