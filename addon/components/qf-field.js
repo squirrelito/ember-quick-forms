@@ -6,6 +6,8 @@ export default Ember.Component.extend({
     hasErrorHint: true,
     label: null,
     field: null,
+    errorOnChange: false,
+    errorOnKey: false,
     showError: false,
     errorMessage: null,
     value: null,
@@ -28,6 +30,19 @@ export default Ember.Component.extend({
                 }
             }
         })(this));
+    },
+    didInsertElement: function() {
+        var self = this;
+        if (this.get('errorOnChange')) {
+            $('#' + this.get('controlID')).blur(function(){
+                self.triggerShowError();
+            });
+        }
+        if (this.get('errorOnKey')) {
+            $('#' + this.get('controlID')).keyup(function(){
+                self.triggerShowError();
+            });
+        }
     },
     triggerShowError: function() {
         var errors = this.get('form.model.errors.' + this.get('field'));

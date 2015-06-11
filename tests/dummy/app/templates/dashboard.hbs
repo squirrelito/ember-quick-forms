@@ -4,8 +4,8 @@
         <div class="col-sm-6">
             {{#qf-form model=model for='asd' action='aaaa'}}
 
-                {{qf-field field='firstName' label='First Name'}}
-                {{qf-field field='lastName' label='Last Name'}}
+                {{qf-field field='firstName' label='First Name' errorOnKey=true}}
+                {{qf-field field='lastName' label='Last Name' errorOnKey=false errorOnChange=true}}
 
             {{/qf-form}}
         </div>
