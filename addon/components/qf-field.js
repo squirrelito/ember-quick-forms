@@ -15,8 +15,8 @@ export default Ember.Component.extend({
     contents: null,
     init: function () {
         this.set('form', this.get('parentView.parentView'));
-        var wrapper = this.get('form.wrapper');
-        this.set('layout', Ember.Handlebars.compile('{{#quick-forms/' + wrapper + '/qf-field tagName="" field=this}}{{yield}}{{/quick-forms/' + wrapper + '/qf-field}}'));
+
+        this.setUpView(this.get('form.wrapper'));
 
         this._super.apply(this, arguments);
 
@@ -45,6 +45,9 @@ export default Ember.Component.extend({
                 self.triggerShowError();
             });
         }
+    },
+    setUpView: function(wrapper) {
+        this.set('layout', Ember.Handlebars.compile('{{#quick-forms/' + wrapper + '/qf-field tagName="" field=this}}{{yield}}{{/quick-forms/' + wrapper + '/qf-field}}'));
     },
     triggerShowError: function() {
         var errors = this.get('form.model.errors.' + this.get('field'));
