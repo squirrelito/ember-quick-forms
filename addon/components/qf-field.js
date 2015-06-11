@@ -30,7 +30,7 @@ export default Ember.Component.extend({
                 } else if (_this.get('showError')) {
                     _this.triggerShowError();
                 }
-            }
+            };
         })(this));
     },
     didInsertElement: function() {

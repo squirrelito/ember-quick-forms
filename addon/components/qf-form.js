@@ -24,14 +24,14 @@ export default Ember.Component.extend({
                         if (_this.get('model.isValid')) {
                             _this.sendAction('action', _this.get('for'), _this.get('model'));
                         } else {
-                            _this.set('showAllErrors', _true);
+                            _this.set('showAllErrors', true);
                         }
-                    }
+                    };
                 })(this), (function(_this) {
                     return function() {
                         _this.set('showAllErrors', true);
                         console.log('Form objected detected errors!');
-                    }
+                    };
                 })(this));
             }
         }

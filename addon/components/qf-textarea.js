@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import QuickFormsField from './qf-field'
+import QuickFormsField from './qf-field';
 
 export default QuickFormsField.extend({
     setUpView: function(wrapper) {
