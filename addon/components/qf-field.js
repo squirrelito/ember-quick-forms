@@ -11,6 +11,7 @@ export default Ember.Component.extend({
     showError: false,
     errorMessage: null,
     value: null,
+    contents: null,
     init: function () {
         this.set('form', this.get('parentView.parentView'));
         var wrapper = this.get('form.wrapper');
@@ -34,12 +35,12 @@ export default Ember.Component.extend({
     didInsertElement: function() {
         var self = this;
         if (this.get('errorOnChange')) {
-            $('#' + this.get('controlID')).blur(function(){
+            this.get('form').$('#' + this.get('controlID')).change(function(){
                 self.triggerShowError();
             });
         }
         if (this.get('errorOnKey')) {
-            $('#' + this.get('controlID')).keyup(function(){
+            this.get('form').$('#' + this.get('controlID')).keyup(function(){
                 self.triggerShowError();
             });
         }
