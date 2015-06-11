@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
     tagName: '',
+    type: 'text',
     hasLabel: true,
     hasErrorHint: true,
     label: null,

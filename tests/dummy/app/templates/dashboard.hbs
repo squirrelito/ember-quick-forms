@@ -2,9 +2,9 @@
     <div class="row">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
-            {{#qf-form model=model for='asd' action='aaaa'}}
+            {{#qf-form model=model for='asd' action='aaaa' wrapper='vertical'}}
 
-                {{qf-field field='firstName' label='First Name' errorOnKey=true}}
+                {{qf-field type='email' field='firstName' label='First Name' errorOnKey=true}}
                 {{qf-field field='lastName' label='Last Name' errorOnKey=false errorOnChange=true}}
 
             {{/qf-form}}
