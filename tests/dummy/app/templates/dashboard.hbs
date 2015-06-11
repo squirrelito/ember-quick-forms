@@ -1,5 +1,14 @@
-{{#qf-form model=model for='asd' action='aaaa'}}
-    <br/>yield top
-    {{qf-field field='firstName' label='First Name'}}
-    yield bottom<br/>
-{{/qf-form}}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            {{#qf-form model=model for='asd' action='aaaa'}}
+
+                {{qf-field field='firstName' label='First Name'}}
+                {{qf-field field='lastName' label='Last Name'}}
+
+            {{/qf-form}}
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+</div>

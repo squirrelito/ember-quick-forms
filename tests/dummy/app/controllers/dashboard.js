@@ -13,11 +13,10 @@ export default Ember.Controller.extend({
             profile: false
         });
         this.set('model', model);
-        console.info(Ember.isNone(this.get('model.validate')));
     },
     actions: {
-        aaaa: function (a,b,c) {
-            console.info('asd',a,b,c);
+        aaaa: function (forAttribute, model) {
+            console.info(forAttribute, model);
         }
     }
 });

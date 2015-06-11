@@ -7,6 +7,10 @@ export default Ember.Object.extend(EmberValidations.Mixin, {
             presence: true,
             length: { minimum: 5 }
         },
+        lastName: {
+            presence: true,
+            length: { minimum: 5 }
+        },
         age: {
             numericality: true
         }
