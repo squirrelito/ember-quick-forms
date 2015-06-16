@@ -7,12 +7,11 @@ export default Ember.Component.extend({
     hasErrorHint: true,
     label: null,
     field: null,
-    errorOnChange: false,
-    errorOnKey: false,
+    errorOnChange: true,
+    errorOnKey: true,
     showError: false,
     errorMessage: null,
     value: null,
-    contents: null,
     init: function () {
         this.set('form', this.get('parentView.parentView'));
 
@@ -21,7 +20,7 @@ export default Ember.Component.extend({
         this._super.apply(this, arguments);
 
         this.set('controlID', 'control_' + this.elementId);
-        Ember.bind(this, 'value', 'form.model.' + this.get('field'));
+        this.bindValue();
 
         this.get('form').addObserver('showAllErrors', (function(_this) {
             return function() {
@@ -34,24 +33,38 @@ export default Ember.Component.extend({
         })(this));
     },
     didInsertElement: function() {
-        var self = this;
         if (this.get('errorOnChange')) {
-            this.get('form').$('#' + this.get('controlID')).change(function(){
-                self.triggerShowError();
-            });
+            this.handleOnChange();
         }
         if (this.get('errorOnKey')) {
-            this.get('form').$('#' + this.get('controlID')).keyup(function(){
+            this.handleOnKey();
+        }
+    },
+    bindValue: function() {
+        Ember.bind(this, 'value', 'form.model.' + this.get('field'));
+    },
+    handleOnChange: function() {
+        var self = this;
+        this.get('form').$('#' + this.get('controlID')).change(function(){
+            Ember.run.next(function() {
                 self.triggerShowError();
             });
-        }
+        });
+    },
+    handleOnKey: function() {
+        var self = this;
+        this.get('form').$('#' + this.get('controlID')).keyup(function(){
+            Ember.run.next(function() {
+                self.triggerShowError();
+            });
+        });
     },
     setUpView: function(wrapper) {
         this.set('layout', Ember.Handlebars.compile('{{#quick-forms/' + wrapper + '/qf-field tagName="" field=this}}{{yield}}{{/quick-forms/' + wrapper + '/qf-field}}'));
     },
     triggerShowError: function() {
         var errors = this.get('form.model.errors.' + this.get('field'));
-        if (errors && errors.get('firstObject')) {
+        if (errors && errors.length > 0) {
             this.set('showError', true);
             this.set('errorMessage', errors.get('firstObject'));
         } else {

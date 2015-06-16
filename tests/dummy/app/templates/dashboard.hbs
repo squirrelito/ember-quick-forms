@@ -4,11 +4,23 @@
         <div class="col-sm-6">
             {{#qf-form model=model for='asd' action='aaaa' wrapper='vertical'}}
 
-                {{qf-field type='email' field='firstName' label='First Name' errorOnKey=true}}
+                {{qf-checklist contents=relationships field='relationship4' label='Relationship4'}}
 
-                {{qf-textarea field='firstName' label='First Name' errorOnKey=true}}
+                {{qf-radiolist contents=relationships field='relationship3' label='Relationship3'}}
 
-                {{qf-field field='lastName' label='Last Name' errorOnKey=false errorOnChange=true}}
+                {{qf-field type='email' field='firstName' label='First Name'}}
+
+                {{qf-field field='lastName' label='Last Name'}}
+
+                {{qf-field type="number" field='age' label='Age'}}
+
+                {{qf-checkbox field='over18' label='Are you over 18?'}}
+
+                {{qf-multiselect contents=relationships field='relationship' label='Relationship'}}
+
+                {{qf-select contents=relationships field='relationship2' label='Relationship2'}}
+
+                {{qf-textarea field='firstName' label='First Name'}}
 
             {{/qf-form}}
         </div>
