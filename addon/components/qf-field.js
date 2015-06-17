@@ -13,7 +13,11 @@ export default Ember.Component.extend({
     errorMessage: null,
     value: null,
     init: function () {
-        this.set('form', this.get('parentView.parentView'));
+        if (this.get('parentView.parentView')) {
+            this.set('form', this.get('parentView.parentView'));
+        } else {
+            this.set('form', this.get('parentView'));
+        }
 
         this.setUpView(this.get('form.wrapper'));
 
