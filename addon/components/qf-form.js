@@ -16,7 +16,6 @@ export default Ember.Component.extend({
         this.get('model').addObserver('backendValidationErrors', (function(_this) {
             return function() {
                 if (_this.get('model.backendValidationErrors')) {
-                    _this.set('showAllErrors', false);
                     _this.set('showAllErrors', true);
                 }
             };
