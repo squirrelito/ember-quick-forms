@@ -1,0 +1,12 @@
+{{#view tagName="div" classNameBindings=':form-group field.showError:has-error'}}
+    {{#if field.hasLabel}} <label class="control-label" for="{{field.controlID}}">{{field.label}}</label> {{/if}}
+
+    {{view 'select' class='form-control'
+        id=field.controlID
+        prompt=field.prompt
+        value=field.value
+        content=field.contents
+        optionValuePath='content.id'
+        optionLabelPath='content.label'
+    }}
+{{/view}}

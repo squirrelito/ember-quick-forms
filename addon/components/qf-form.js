@@ -4,6 +4,7 @@ export default Ember.Component.extend({
     tagName: 'div',
     wrapper: 'vertical',
     for: null,
+    validate: true,
     model: null,
     showAllErrors: false,
     init: function () {
@@ -15,7 +16,8 @@ export default Ember.Component.extend({
         e.preventDefault();
         this.set('showAllErrors', false);
         if (this.get('for')) {
-            if (Ember.isNone(this.get('model.validate'))) {
+            if (!this.get('validate') || Ember.isNone(this.get('model.validate'))) {
+                this.set('validate', true);
                 this.sendAction('action', this.get('for'), this.get('model'));
             } else {
                 var promise = this.get('model').validate();

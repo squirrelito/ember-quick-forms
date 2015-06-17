@@ -1,0 +1,8 @@
+{{#view tagName="div" classNameBindings=':form-group field.showError:has-error'}}
+    <label class="control-label" for="{{field.controlID}}">
+        {{input type='checkbox' id=field.controlID checked=field.value}}
+        {{#if field.hasLabel}}
+            {{field.label}}
+        {{/if}}
+    </label>
+{{/view}}

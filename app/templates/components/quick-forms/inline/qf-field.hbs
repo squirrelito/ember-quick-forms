@@ -1,0 +1,4 @@
+{{#view tagName="div" classNameBindings=':form-group field.showError:has-error'}}
+    {{#if field.hasLabel}} <label class="control-label" for="{{field.controlID}}">{{field.label}}</label> {{/if}}
+    {{input type=field.type class="form-control" id=field.controlID value=field.value placeholder=field.label}}
+{{/view}}

@@ -1,0 +1,10 @@
+{{#view tagName="div" classNameBindings=':form-group field.showError:has-error'}}
+    {{#if field.hasLabel}} <label class="control-label" for="{{field.controlID}}">{{field.label}}</label> {{/if}}
+
+    {{#each field.contents as |item|}}
+        <label class="control-label">
+            {{input type='checkbox' class=field.controlID name=field.controlID checked=item.checked}}
+            {{item.label}}
+        </label>
+    {{/each}}
+{{/view}}

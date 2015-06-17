@@ -21,7 +21,7 @@ export default Ember.Controller.extend({
         this.set('model', model);
     },
     actions: {
-        aaaa: function (forAttribute, model) {
+        testAction: function (forAttribute, model) {
             console.info(forAttribute, model);
         }
     }
