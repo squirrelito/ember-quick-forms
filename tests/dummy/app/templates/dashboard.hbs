@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
-            {{#qf-form model=model for='submit' action='testAction' wrapper='vertical'}}
+            {{#qf-form model=model for='submit' action='testAction' wrapper='horizontal'}}
 
                 {{qf-checklist contents=relationships field='relationship4' label='Relationship4'}}
 
@@ -22,8 +22,12 @@
 
                 {{qf-textarea field='firstName' label='First Name'}}
 
-                {{qf-button name='submit' class='btn btn-success' label='Submit'}}
-                {{qf-button validate=false name='reset' class='btn btn-default' label='Reset'}}
+                <div class="form-group">
+                    <div class="col-sm-8 col-sm-offset-4">
+                        {{qf-button name='submit' class='btn btn-success' label='Submit'}}
+                        {{qf-button validate=false name='reset' class='btn btn-default' label='Reset'}}
+                    </div>
+                </div>
 
             {{/qf-form}}
         </div>
