@@ -1,12 +1,12 @@
 {{#if field.hasLabel}} <label class="control-label" for="{{field.controlID}}">{{field.label}}</label> {{/if}}
 
-{{select multiple='true' class='form-control'
-    id=field.controlID
-    selection=field.value
-    content=field.contents
-    optionValuePath='content.id'
-    optionLabelPath='content.label'
-}}
+<select class="form-control" multiple id={{field.controlID}}>
+  {{#each field.contents as |item|}}
+      <option value="{{item.id}}" selected={{item.checked}}>
+        {{item.label}}
+      </option>
+  {{/each}}
+</select>
 
 {{#if field.hasErrorHint}}
     {{#if field.showError}}

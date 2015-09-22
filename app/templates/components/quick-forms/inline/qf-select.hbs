@@ -1,10 +1,15 @@
 {{#if field.hasLabel}} <label class="control-label" for="{{field.controlID}}">{{field.label}}</label> {{/if}}
 
-{{select class='form-control'
-    id=field.controlID
-    prompt=field.prompt
-    value=field.value
-    content=field.contents
-    optionValuePath='content.id'
-    optionLabelPath='content.label'
-}}
+<select class="form-control" id={{field.controlID}}>
+  {{#if field.prompt}}
+      <option disabled>
+        {{field.prompt}}
+      </option>
+  {{/if}}
+
+  {{#each field.contents as |item|}}
+      <option value="{{item.id}}" selected={{item.checked}}>
+        {{item.label}}
+      </option>
+  {{/each}}
+</select>
