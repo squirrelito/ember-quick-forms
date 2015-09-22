@@ -2,7 +2,10 @@ import Ember from 'ember';
 
 var qfFormsAssoc = {};
 export default Ember.Component.extend({
-    tagName: 'div',
+    tagName: 'form',
+    classNames: [],
+    attributeBindings: ['novalidate'],
+    novalidate: '',
     wrapper: 'vertical',
     for: null,
     validate: true,
@@ -10,7 +13,8 @@ export default Ember.Component.extend({
     showAllErrors: false,
     init: function () {
         var wrapper = this.get('wrapper');
-        this.set('layout', Ember.Handlebars.compile('{{#quick-forms/' + wrapper + '/qf-form tagName=""}}{{yield}}{{/quick-forms/' + wrapper + '/qf-form}}'));
+        this.set('classNames', ['form-' + wrapper]);
+        this.set('layout', Ember.Handlebars.compile('{{#quick-forms/' + wrapper + '/qf-form}}{{yield}}{{/quick-forms/' + wrapper + '/qf-form}}'));
         this._super.apply(this, arguments);
 
         this._super.apply(this, arguments);

@@ -1,22 +1,22 @@
 {
   "name": "ember-quick-forms",
   "dependencies": {
-    "ember": "components/ember#canary",
-    "ember-cli-shims": "ember-cli/ember-cli-shims#0.0.3",
-    "ember-cli-test-loader": "ember-cli-test-loader#0.1.3",
-    "ember-data": "components/ember-data#canary",
-    "ember-load-initializers": "ember-cli/ember-load-initializers#0.1.4",
-    "ember-qunit": "0.3.3",
-    "ember-qunit-notifications": "0.0.7",
+    "ember": "2.0.*",
+    "ember-data": "2.*",
+    "ember-cli-shims": "*",
+    "ember-cli-test-loader": "*",
+    "ember-load-initializers": "*",
     "ember-resolver": "~0.1.15",
-    "jquery": "^1.11.1",
-    "loader.js": "ember-cli/loader.js#3.2.0",
-    "qunit": "~1.17.1"
+    "jquery": "*",
+    "loader.js": "*"
   },
   "devDependencies": {
-    "bootstrap": "~3.3.4"
+    "bootstrap": "~3.3.4",
+    "qunit": "~1.17.1",
+    "ember-qunit": "0.3.3",
+    "ember-qunit-notifications": "0.0.7"
   },
   "resolutions": {
-    "ember": "canary"
+    "ember": "2.0.*"
   }
 }

@@ -1,20 +1,18 @@
-{{#view tagName="div" classNameBindings=':form-group field.showError:has-error'}}
-    <label class="col-sm-4 control-label" for="{{field.controlID}}">{{#if field.hasLabel}}{{field.label}}{{/if}}</label>
+<label class="col-sm-4 control-label" for="{{field.controlID}}">{{#if field.hasLabel}}{{field.label}}{{/if}}</label>
 
-    <div class="col-sm-8">
-        {{view 'select' class='form-control'
-            id=field.controlID
-            prompt=field.prompt
-            value=field.value
-            content=field.contents
-            optionValuePath='content.id'
-            optionLabelPath='content.label'
-        }}
+<div class="col-sm-8">
+    {{select class='form-control'
+        id=field.controlID
+        prompt=field.prompt
+        value=field.value
+        content=field.contents
+        optionValuePath='content.id'
+        optionLabelPath='content.label'
+    }}
 
-        {{#if field.hasErrorHint}}
-            {{#if field.showError}}
-                <span class="help-block">{{field.errorMessage}}</span>
-            {{/if}}
+    {{#if field.hasErrorHint}}
+        {{#if field.showError}}
+            <span class="help-block">{{field.errorMessage}}</span>
         {{/if}}
-    </div>
-{{/view}}
+    {{/if}}
+</div>

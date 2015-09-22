@@ -1,7 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    tagName: '',
+    tagName: 'div',
+    classNames: ['form-group'],
+    classNameBindings: ['showError:has-error'],
     type: 'text',
     hasLabel: true,
     hasErrorHint: true,
@@ -64,7 +66,7 @@ export default Ember.Component.extend({
         });
     },
     setUpView: function(wrapper) {
-        this.set('layout', Ember.Handlebars.compile('{{#quick-forms/' + wrapper + '/qf-field tagName="" field=this}}{{yield}}{{/quick-forms/' + wrapper + '/qf-field}}'));
+        this.set('layout', Ember.Handlebars.compile('{{#quick-forms/' + wrapper + '/qf-field field=this}}{{yield}}{{/quick-forms/' + wrapper + '/qf-field}}'));
     },
     triggerShowError: function() {
         var errors = this.get('form.model.errors.' + this.get('field'));

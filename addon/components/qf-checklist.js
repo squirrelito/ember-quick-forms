@@ -33,6 +33,6 @@ export default QuickFormsField.extend({
         });
     },
     setUpView: function(wrapper) {
-        this.set('layout', Ember.Handlebars.compile('{{#quick-forms/' + wrapper + '/qf-checklist tagName="" field=this}}{{yield}}{{/quick-forms/' + wrapper + '/qf-checklist}}'));
+        this.set('layout', Ember.Handlebars.compile('{{#quick-forms/' + wrapper + '/qf-checklist field=this}}{{yield}}{{/quick-forms/' + wrapper + '/qf-checklist}}'));
     }
 });

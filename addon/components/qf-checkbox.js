@@ -14,6 +14,6 @@ export default QuickFormsField.extend({
         return;
     },
     setUpView: function(wrapper) {
-        this.set('layout', Ember.Handlebars.compile('{{#quick-forms/' + wrapper + '/qf-checkbox tagName="" field=this}}{{yield}}{{/quick-forms/' + wrapper + '/qf-checkbox}}'));
+        this.set('layout', Ember.Handlebars.compile('{{#quick-forms/' + wrapper + '/qf-checkbox field=this}}{{yield}}{{/quick-forms/' + wrapper + '/qf-checkbox}}'));
     }
 });

@@ -1,14 +1,12 @@
-{{#view tagName="div" classNameBindings=':form-group field.showError:has-error'}}
-    <label class="col-sm-8 col-sm-offset-4" for="{{field.controlID}}">
-        {{input type='checkbox' id=field.controlID checked=field.value}}
-        {{#if field.hasLabel}}
-            {{field.label}}
-        {{/if}}
-    </label>
-
-    {{#if field.hasErrorHint}}
-        {{#if field.showError}}
-        <span class="col-sm-8 col-sm-offset-4 help-block">{{field.errorMessage}}</span>
-        {{/if}}
+<label class="col-sm-8 col-sm-offset-4" for="{{field.controlID}}">
+    {{input type='checkbox' id=field.controlID checked=field.value}}
+    {{#if field.hasLabel}}
+        {{field.label}}
     {{/if}}
-{{/view}}
+</label>
+
+{{#if field.hasErrorHint}}
+    {{#if field.showError}}
+    <span class="col-sm-8 col-sm-offset-4 help-block">{{field.errorMessage}}</span>
+    {{/if}}
+{{/if}}
