@@ -15,7 +15,7 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Georgi Budinov",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.1.2",
