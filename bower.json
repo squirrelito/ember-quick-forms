@@ -1,19 +1,19 @@
 {
   "name": "ember-quick-forms",
   "dependencies": {
-    "ember": "~2.0.2",
-    "ember-data": "2.1.0-beta.3",
-    "ember-load-initializers": "v0.1.7",
-    "ember-resolver": "~0.1.15",
-    "jquery": "~2.1.4",
-    "loader.js": "v3.3.0"
+    "ember": "2.x",
+    "ember-data": "2.x",
+    "ember-load-initializers": "v0.1.x",
+    "ember-resolver": "0.1.x",
+    "jquery": "2.x",
+    "loader.js": "v3.3.x"
   },
   "devDependencies": {
-    "ember-cli-shims": "^0.0.6",
-    "ember-cli-test-loader": "^0.2.1",
-    "ember-qunit": "^0.3.3",
-    "ember-qunit-notifications": "0.0.7",
-    "qunit": "~1.17.1",
-    "bootstrap": "~3.3.4"
+    "ember-cli-shims": "0.0.x",
+    "ember-cli-test-loader": "0.2.x",
+    "ember-qunit": "0.3.x",
+    "ember-qunit-notifications": "0.0.x",
+    "qunit": "1.17.x",
+    "bootstrap": "3.3.x"
   }
 }
