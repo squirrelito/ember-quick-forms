@@ -12,9 +12,9 @@ module.exports = function(defaults) {
    behave. You most likely want to be modifying `./index.js` or app's build file
    */
 
-  app.import('bower_components/ember/ember-template-compiler.js');
-  app.import('bower_components/bootstrap/dist/css/bootstrap.min.css');
-  app.import('bower_components/bootstrap/dist/js/bootstrap.min.js');
+  app.import(app.bowerDirectory + '/ember/ember-template-compiler.js');
+  app.import(app.bowerDirectory + '/bootstrap/dist/css/bootstrap.min.css');
+  app.import(app.bowerDirectory + '/bootstrap/dist/js/bootstrap.min.js');
 
   return app.toTree();
 };
