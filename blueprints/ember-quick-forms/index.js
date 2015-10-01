@@ -8,9 +8,10 @@ module.exports = {
     app.import(app.bowerDirectory + '/bootstrap/dist/js/bootstrap.min.js');
   },
   afterInstall: function () {
-    this.addBowerPackageToProject('ember', '2.x');
-    this.addBowerPackageToProject('jquery', '2.x');
-    this.addBowerPackageToProject('bootstrap', '3.x');
-    return true;
+    return this.addBowerPackagesToProject([
+      {'name':'ember', 'target': '2.x'},
+      {'name':'jquery', 'target': '2.x'},
+      {'name':'bootstrap', 'target': '3.x'}
+    ]);
   }
 };
