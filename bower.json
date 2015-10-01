@@ -14,6 +14,6 @@
     "ember-qunit": "0.3.x",
     "ember-qunit-notifications": "0.0.x",
     "qunit": "1.17.x",
-    "bootstrap": "3.3.x"
+    "bootstrap": "3.x"
   }
 }
