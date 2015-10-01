@@ -1,8 +1,6 @@
 module.exports = {
   description: '',
-  normalizeEntityName: function (entityName) {
-    return entityName;
-  },
+  normalizeEntityName: function () {},
   included: function (app) {
     this._super.included(app);
     app.import(app.bowerDirectory + '/ember/ember-template-compiler.js');
