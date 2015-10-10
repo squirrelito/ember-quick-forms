@@ -43,5 +43,9 @@ module.exports = function(environment) {
 
   }
 
+  if (environment === 'gh-pages') {
+    ENV.baseURL = '/ember-quick-forms/';
+  }
+
   return ENV;
 };
