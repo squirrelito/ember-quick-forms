@@ -1,25 +1,27 @@
-# Ember-quick-forms
+# Ember - customizable form builder
 
-This README outlines the details of collaborating on this Ember addon.
+This addon helps in generating dynamic forms:
+* integrated with ember validations
+* integrated with Bootstrap 3.x
+* allows setup for actions posted to the controller
+
+## Dependencies
+* Ember 2.x
+* Ember-data 2.x
+* jQuery 2.x
+* jQuery UI 1.11.x
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+* `ember init hostApp`
+* `cd hostApp`
+* `ember install ember-quick-forms`
 
 ## Running
 
 * `ember server`
 * Visit your app at http://localhost:4200.
 
-## Running Tests
+## Demo
 
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+[http://squirrelito.github.io/ember-quick-forms/](http://squirrelito.github.io/ember-quick-forms/)

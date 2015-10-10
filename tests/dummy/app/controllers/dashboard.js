@@ -26,7 +26,7 @@ export default Ember.Controller.extend({
   },
   actions: {
     testAction: function (forAttribute, model) {
-      console.info(forAttribute, model);
+      alert('Successful save');
     }
   }
 });
