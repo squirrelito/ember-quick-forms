@@ -1,7 +1,0 @@
-{{#if field.hasLabel}} <label class="control-label" for="{{field.controlID}}">{{field.label}}</label> {{/if}}
-{{input type=field.type class="form-control" id=field.controlID value=field.value placeholder=field.label}}
-{{#if field.hasErrorHint}}
-    {{#if field.showError}}
-    <span class="help-block">{{field.errorMessage}}</span>
-    {{/if}}
-{{/if}}

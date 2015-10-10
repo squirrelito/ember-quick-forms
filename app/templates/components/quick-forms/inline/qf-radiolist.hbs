@@ -1,8 +1,0 @@
-{{#if field.hasLabel}} <label class="control-label" for="{{field.controlID}}">{{field.label}}</label> {{/if}}
-
-{{#each field.contents as |item|}}
-    <label class="control-label">
-        {{input type='radio' class=field.controlID name=field.controlID value=item.id}}
-        {{item.label}}
-    </label>
-{{/each}}

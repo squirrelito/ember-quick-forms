@@ -1,1 +1,0 @@
-export { default } from 'ember-quick-forms/components/qf-button';
